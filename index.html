@@ -57,6 +57,30 @@
 
 <body>
 
+	<!-- lightbox modal -->
+	<div class="modal" id="myModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h3 class="modal-title">Lightbox</h3>
+				</div>
+				<div class="modal-body">
+					<div id="modalCarousel" class="carousel">
+						<div class="carousel-inner"></div>
+						<a class="carousel-control left" href="#modalCarousel" data-slide="prev">
+							<i class="glyphicon glyphicon-chevron-left"></i>
+						</a>
+						<a class="carousel-control right" href="#modalCarousel" data-slide="next">
+							<i class="glyphicon glyphicon-chevron-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end lightbox modal -->
+
 	<div class="fh5co-loader" style="display: none;"></div>
 
 	<div id="page" class="lazy">
@@ -499,7 +523,7 @@
 				<div class="row display-flex">
 					<div class="col-md-4">
 						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
+							<a href="#" class="blog-bg thumbnail"
 								style="background-image: url(Portfolio_files/images/laravel.webp);"></a>
 							<div class="blog-text">
 								<span class="posted_on">(05/2021-12/2021)</span>
@@ -522,7 +546,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
+							<a href="#" class="blog-bg thumbnail"
 								style="background-image: url(Portfolio_files/images/laravel.webp);"></a>
 							<div class="blog-text">
 								<span class="posted_on">November 2023</span>
@@ -537,7 +561,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
+							<a href="#" class="blog-bg thumbnail"
 								style="background-image: url(Portfolio_files/images/appscript.webp);"></a>
 							<div class="blog-text">
 								<span class="posted_on">November 2023</span>
@@ -553,7 +577,7 @@
 				<div class="row display-flex">
 					<div class="col-md-4">
 						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
+							<a href="#" class="blog-bg thumbnail"
 								style="background-image: url(Portfolio_files/images/laravel.webp);"></a>
 							<div class="blog-text">
 								<span class="posted_on">(09/2020 - 05/2021)</span>
@@ -573,7 +597,7 @@
 
 					<div class="col-md-4">
 						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
+							<a href="#" class="blog-bg thumbnail"
 								style="background-image: url(Portfolio_files/images/php.jpeg);"></a>
 							<div class="blog-text">
 								<span class="posted_on">November 2023</span>
@@ -589,7 +613,7 @@
 
 					<div class="col-md-4">
 						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
+							<a href="#" class="blog-bg thumbnail"
 								style="background-image: url(Portfolio_files/images/nodejs.png);"></a>
 							<div class="blog-text">
 								<span class="posted_on">November 2023</span>
@@ -603,7 +627,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
+							<a href="#" class="blog-bg thumbnail"
 								style="background-image: url(Portfolio_files/images/nodejs.png);"></a>
 							<div class="blog-text">
 								<span class="posted_on">Apirl 2024</span>
@@ -618,7 +642,7 @@
 
 					<div class="col-md-4">
 						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
+							<a href="#" class="blog-bg thumbnail"
 								style="background-image: url(Portfolio_files/images/php.jpeg);"></a>
 							<br class="blog-text">
 							<span class="posted_on">September 2023</span>
@@ -628,7 +652,7 @@
 							- Tự động làm mới Zalo access token api sau khi cấu hình lần đầu
 							- Gửi tin nhắn truyền thông tới khách hàng phân loại theo tag <br>
 							- Tư động gửi ZNS nhắc nhở tới khách hàng theo rule đã tạo
-							- Quẩn lý tin nhắn Zalo zns template  <br>
+							- Quẩn lý tin nhắn Zalo zns template <br>
 							- Đồng bộ Zalo zns template khi có thay đổi
 							<p><b>Skills: </b> PHP, MySQL, REST API</p>
 						</div>
@@ -637,16 +661,17 @@
 
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box ">
-						<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
+						<a href="#" class="blog-bg thumbnail"
 							style="background-image: url(Portfolio_files/images/nodejs.png);"></a>
 						<div class="blog-text">
 							<span class="posted_on">Apirl 2024</span>
 							<h3><a href="https://dattv299.github.io/dattv29.github.io/">Ứng dụng Nodejs trên Google
 									cloud function và trên host để thông báo biến động số dư tài khoản ngân hàng về
 									Google chat</a></h3>
-									+ Tạo API bằng expressjs để nhận tin nhắn sdtk từ ifttt api, lọc tên ngân hàng, xử lý tin nhắn số dư.
-									+ Nodejs cloud function để kết nối google chat với api
-									+ Giao diện web để quản lý các kết nối, giới hạn các gói dịch vụ
+							+ Tạo API bằng expressjs để nhận tin nhắn sdtk từ ifttt api, lọc tên ngân hàng, xử lý tin
+							nhắn số dư.
+							+ Nodejs cloud function để kết nối google chat với api
+							+ Giao diện web để quản lý các kết nối, giới hạn các gói dịch vụ
 							<p></p>
 							<p><b>Skills: </b> NodeJs, Cloud function, Google Api, SQL </p>
 						</div>
@@ -703,6 +728,37 @@
 
 		<script type="text/javascript" charset="UTF-8" src="./Portfolio_files/js/common.js"></script>
 		<script type="text/javascript" charset="UTF-8" src="./Portfolio_files/js/util.js"></script> -->
+
+	<script>
+		$('.content-holder .thumbnail').each(function (i) {
+			var item = $('<div class="item"></div>');
+			var itemDiv = $(this).parents('div');
+			var title = $(this).parent('a').attr("title");
+
+			item.attr("title", title);
+			$(itemDiv.html()).appendTo(item);
+			item.appendTo('.carousel-inner');
+			if (i === 0) { // set first item active
+				item.addClass('active');
+			}
+		});
+
+		/* activate the carousel */
+		$('#modalCarousel').carousel({ interval: false });
+
+		/* change modal title when slide changes */
+		$('#modalCarousel').on('slid.bs.carousel', function () {
+			$('.modal-title').html($(this).find('.active').attr("title"));
+		});
+
+		/* when clicking a thumbnail */
+		$('.row .thumbnail').click(function () {
+			var idx = $(this).parents('div').index();
+			var id = parseInt(idx);
+			$('#myModal').modal('show'); // show the modal
+			$('#modalCarousel').carousel(id); // slide carousel to selected
+		});
+	</script>
 
 	<!-- Main -->
 	<script src="./Portfolio_files/js/main.js"></script>
