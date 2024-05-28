@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <!-- saved from url=(0025)https://oliewu.github.io/ -->
 <html
-	class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
-	style="">
+	class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths">
 <link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
 <link type="text/css" rel="stylesheet" id="dark-mode-general-link">
 <style lang="en" type="text/css" id="dark-mode-custom-style"></style>
 <style lang="en" type="text/css" id="dark-mode-native-style"></style>
 <style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -57,6 +57,35 @@
 
 <body>
 
+	<!-- lightbox modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h3 class="modal-title"></h3>
+				</div>
+				<div class="modal-body">
+					<div id="modalCarousel" class="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#modalCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#modalCarousel" data-slide-to="1"></li>
+						</ol>
+						<div class="carousel-inner">
+						</div>
+						<a class="carousel-control left" href="#modalCarousel" data-slide="prev">
+							<i class="glyphicon glyphicon-chevron-left"></i>
+						</a>
+						<a class="carousel-control right" href="#modalCarousel" data-slide="next">
+							<i class="glyphicon glyphicon-chevron-right"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end lightbox modal -->
+
 	<div class="fh5co-loader" style="display: none;"></div>
 
 	<div id="page" class="lazy">
@@ -68,8 +97,9 @@
 						<div class="display-t js-fullheight" style="height: 988px;">
 							<div class="display-tc js-fullheight animate-box fadeIn animated-fast"
 								data-animate-effect="fadeIn" style="height: 988px;">
-								<div class="profile-thumb" style="background: url(Portfolio_files/images/dev.png);"></div>
-							
+								<div class="profile-thumb" style="background: url(Portfolio_files/images/dev.png);">
+								</div>
+
 								<h1><span>Dat Tran</span></h1>
 								<h3><span>The Boring Coder</span></h3>
 								<p>
@@ -77,7 +107,7 @@
 								<ul class="fh5co-social-icons">
 									<link rel="stylesheet" href="./Portfolio_files/css/font-awesome.min.css">
 									<li><a href="https://github.com/dattv299"><i class="fa fa-github"></i></a></li>
-									
+
 									<li><a href="https://dattv299.github.io/dattv29.github.io/" download=""><i
 												class="icon-dribbble2"></i></a></li>
 
@@ -167,7 +197,7 @@
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">PHP Web Developer</h3>
-										<span class="company">08/2020 – Đến nay</span>
+										<span class="company">08/2020 - Đến nay</span>
 									</div>
 									<div class="timeline-body">
 										<p><b> Web Dev: </b>WHMCS, NodeJS, RESTAPI</p>
@@ -478,7 +508,6 @@
 										width="48" height="48"><strong> Bitbucket </strong> </span></td> -->
 						</tr>
 
-
 					</tbody>
 				</table>
 
@@ -488,7 +517,7 @@
 
 
 		<div id="fh5co-blog">
-			<div class="container">
+			<div class="prj-container">
 				<div class="row animate-box ">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 						<h2>Projects</h2>
@@ -497,49 +526,52 @@
 				</div>
 				<div class="row display-flex">
 					<div class="col-md-4">
-						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
-								style="background-image: url(Portfolio_files/images/laravel.webp);"></a>
+						<div class="fh5co-blog animate-box img-item"
+							data="Portfolio_files/prj-images/cke.png||Portfolio_files/prj-images/cke1.png||Portfolio_files/prj-images/cke2.png||Portfolio_files/prj-images/cke3.png||Portfolio_files/prj-images/cke4.png||Portfolio_files/prj-images/cke5.png||Portfolio_files/prj-images/cke6.png||Portfolio_files/prj-images/cke7.png">
+							<span class="blog-bg thumbnail"
+								style="background-image: url(Portfolio_files/images/laravel.webp);"></span>
 							<div class="blog-text">
 								<span class="posted_on">(05/2021-12/2021)</span>
-								<h3><a href="https://dattv299.github.io/dattv29.github.io/">Thực hiện project sử dụng Laravel framework tạo
-										hệ thống tạo chữ ký gmail cho người dùng cá nhân và người dùng doanh nghiệp
-										(https://app.cke.vn)</a></h3>
-								<p>+ Sử dụng backend - frontend: Laravel
-
-									+ API: Google Mail API
-
-									+ Database: MySQL
-
-									+ Git và Github để quản lý source code
-
-									+ VScode IDE</p>
+								<h3>Thực hiện project sử dụng
+									Laravel framework tạo
+									hệ thống tạo và quản lý chữ ký gmail cho người dùng cá nhân và người dùng doanh nghiệp
+									(https://app.cke.vn)</h3>
+								<p>+ Sử dụng backend - frontend: Laravel<br>
+									+ Email signature editor: tạo chữ ký email dựa trên mẫu có sẵn hoặc tạo theo ý người dùng
+									+ Google Mail API: để cài đặt chữ ký vào tài khoản gmail của người dùng<br>
+									+ MySQL: Lưu trữ và quản lý tài khoản, gói dịch vụ, mẫu chữ ký email<br>
+									+ Git và Github để quản lý source code<br>
+									<!-- + VScode IDE</p> -->
 								<p><b>Skills: </b> Laravel, MySQL, Github</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
-								style="background-image: url(Portfolio_files/images/laravel.webp);"></a>
+						<div class="fh5co-blog animate-box img-item"
+							data="Portfolio_files/prj-images/airtable.png||Portfolio_files/prj-images/airtable2.png||Portfolio_files/prj-images/airtable3.png">
+							<span class="blog-bg thumbnail"
+								style="background-image: url(Portfolio_files/images/laravel.webp);"></span>
 							<div class="blog-text">
 								<span class="posted_on">November 2023</span>
-								<h3><a href="https://dattv299.github.io/dattv29.github.io/">- Viết, sửa lỗi và bảo trì các module Xenforo
-										và WHMCS, thêm các tính năng cho WHMCS sử dụng mô hình MVC, hook index để bắt
-										các sự kiện và kết nối với API bên ngoài </a></h3>
+								<h3>- Viết, sửa lỗi và bảo trì
+									các module Xenforo
+									và WHMCS, thêm các tính năng cho WHMCS sử dụng mô hình MVC, hook index để bắt
+									các sự kiện và kết nối với API bên ngoài </h3>
 								<p></p>
 								<p><b>Skills: </b> Laravel, MySQL, Github</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
-								style="background-image: url(Portfolio_files/images/appscript.webp);"></a>
+						<div class="fh5co-blog animate-box img-item"
+							data="Portfolio_files/prj-images/||">
+							<span class="blog-bg thumbnail"
+								style="background-image: url(Portfolio_files/images/appscript.webp);"></span>
 							<div class="blog-text">
 								<span class="posted_on">November 2023</span>
-								<h3><a href="https://dattv299.github.io/dattv29.github.io/">Google Appscript tương tác với API để quản lý
-										dữ liệu, tương tác Google Sheet, Google Drive </a></h3>
+								<h3>Google Appscript tương tác
+									với API để quản lý
+									dữ liệu, tương tác Google Sheet, Google Drive </h3>
 								<p></p>
 								<p><b>Skills: </b> Laravel, MySQL, Github</p>
 							</div>
@@ -548,104 +580,234 @@
 				</div>
 				<div class="row display-flex">
 					<div class="col-md-4">
-						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
-								style="background-image: url(Portfolio_files/images/laravel.webp);"></a>
+						<div class="fh5co-blog animate-box img-item"
+							data="Portfolio_files/prj-images/asx1.png||Portfolio_files/prj-images/asx2.png||Portfolio_files/prj-images/asx3.png||Portfolio_files/prj-images/asx4.png||Portfolio_files/prj-images/asx5.png||Portfolio_files/prj-images/asx6.png||Portfolio_files/prj-images/asx7.png">
+							<span class="blog-bg thumbnail"
+								style="background-image: url(Portfolio_files/images/laravel.webp);"></span>
 							<div class="blog-text">
 								<span class="posted_on">(09/2020 - 05/2021)</span>
-								<h3><a href="https://dattv299.github.io/dattv29.github.io/">Thực hiện project sử dụng Laravel framework để
-										tạo hệ thống tự động đồng bộ các Google Sheet trong Drive (http://app.asx.vn)
-									</a></h3>
-								<br> + Sử dụng backend - frontend : Laravel</br>
+								<h3>Thực hiện project sử dụng
+									Laravel framework để
+									tạo hệ thống tự động đồng bộ các Google Sheet trong Drive (http://app.asx.vn)
+								</h3>
+								<br> + Sử dụng Laravel</br>
 								+ API: Google Drive API, Google Sheet API<br>
-								+ Database: MySQL<br>
+								+ MySQL : lưu trữ và quản lý tài khoản, workspace<br>
 								+ Git và Github để quản lý source code<br>
-								+ VScode IDE</p>
+								<!-- + VScode IDE</p> -->
 								<p><b>Skills: </b> Laravel, MySQL, Github</p>
 							</div>
 						</div>
 					</div>
 
 					<div class="col-md-4">
-						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
-								style="background-image: url(Portfolio_files/images/php.jpeg);"></a>
+						<div class="fh5co-blog animate-box img-item"
+							data="Portfolio_files/prj-images/||">
+							<span class="blog-bg thumbnail"
+								style="background-image: url(Portfolio_files/images/php.jpeg);"></span>
 							<div class="blog-text">
 								<span class="posted_on">November 2023</span>
-								<h3><a href="https://dattv299.github.io/dattv29.github.io/">Xây dựng các tính năng tương tác với API như
-										Viettelpost, Airtable, Pipedrive để tạo vận đơn, quản lý đơn hàng </a></h3>
+								<h3>Xây dựng các tính năng tương
+									tác với API như
+									Viettelpost, Airtable, Pipedrive để tạo vận đơn, quản lý đơn hàng</h3>
 								<p></p>
 								<p><b>Skills: </b>PHP, MySQL, Github</p>
 							</div>
 						</div>
 					</div>
+
+
 					<div class="col-md-4">
-						<div class="fh5co-blog animate-box ">
-							<a href="https://dattv299.github.io/dattv29.github.io/" class="blog-bg"
-								style="background-image: url(Portfolio_files/images/nodejs.png);"></a>
+						<div class="fh5co-blog animate-box img-item"
+							data="Portfolio_files/prj-images/domain.png">
+							<span class="blog-bg thumbnail"
+								style="background-image: url(Portfolio_files/images/nodejs.png);"></span>
 							<div class="blog-text">
 								<span class="posted_on">November 2023</span>
-								<h3><a href="https://dattv299.github.io/dattv29.github.io/">Viết ứng dụng Nodejs để đăng ký tên miền thông
-										qua API của dịch vụ đăng ký tên miền</a></h3>
+								<h3>Viết ứng dụng Nodejs để đăng
+									ký tên miền thông
+									qua API của dịch vụ đăng ký tên miền</h3>
+									<br>
+									- Quản lý tên miền cần đăng ký và đã đăng ký(CRUD)
+									- Lập lịch tự động kiểm tra và đăng ký tên miền qua nhanhoa API và tenten API 
+									- Cấu hình server 
 								<p></p>
 								<p><b>Skills: </b> NodeJs, MySQL, Github</p>
 							</div>
 						</div>
 					</div>
+					<div class="col-md-4">
+						<div class="fh5co-blog animate-box img-item"
+							data="Portfolio_files/prj-images/bigquery.png">
+							<span class="blog-bg thumbnail"
+								style="background-image: url(Portfolio_files/images/nodejs.png);"></span>
+							<div class="blog-text">
+								<span class="posted_on">Apirl 2024</span>
+								<h3>Ứng dụng Nodejs
+									Sử dụng Google Cloud Functions, Pub/Sub, Cloud Scheduler để đồng bộ các dữ liệu từ Google Reseller API vào
+									Google Bigquery</h3>
+								<p></p>
+								<p><b>Skills: </b> NodeJs, Cloud function, Google Api, SQL </p>
+							</div>
+						</div>
+					</div>
 
+					<div class="col-md-4">
+						<div class="fh5co-blog animate-box img-item"
+							data="Portfolio_files/prj-images/zns.png||Portfolio_files/prj-images/zns1.png||Portfolio_files/prj-images/zns2.png||Portfolio_files/prj-images/zns3.png||Portfolio_files/prj-images/zns4.png||Portfolio_files/prj-images/zns5.png||Portfolio_files/prj-images/zns6.png||Portfolio_files/prj-images/zns7.png">
+							<span class="blog-bg thumbnail"
+								style="background-image: url(Portfolio_files/images/php.jpeg);"></span>
+							<br class="blog-text">
+							<span class="posted_on">September 2023</span>
+							<h3>Phát triển WHMCS module ZALO
+								notification</h3>
+							<br>- Gửi Zalo ZNS đến khách hàng khi tạo đơn hàng hoá đơn trên WHMCS<br>
+							- Tự động làm mới Zalo access token api sau khi cấu hình lần đầu<br>
+							- Gửi tin nhắn truyền thông tới khách hàng phân loại theo tag <br>
+							- Tư động gửi ZNS nhắc nhở tới khách hàng theo rule đã tạo<br>
+							- Quẩn lý tin nhắn Zalo zns template <br>
+							- Đồng bộ Zalo zns template khi có thay đổi
+							<p><b>Skills: </b> PHP, MySQL, REST API</p>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="fh5co-blog animate-box img-item"
+							data="Portfolio_files/prj-images/bankfeed.png||Portfolio_files/prj-images/bankfeed1.png||Portfolio_files/prj-images/bankfeed2.png||Portfolio_files/prj-images/bankfeed3.png||Portfolio_files/prj-images/bankfeed4.png||Portfolio_files/prj-images/bankfeed5.png">
+							<span class="blog-bg thumbnail"
+								style="background-image: url(Portfolio_files/images/nodejs.png);"></span>
+							<div class="blog-text">
+								<span class="posted_on">Apirl 2024</span>
+								<h3>Ứng dụng Nodejs trên Google
+									cloud function và trên host để thông báo biến động số dư tài khoản ngân hàng về
+									Google chat</h3>
+								+ Tạo API bằng expressjs để nhận tin nhắn sdtk từ ifttt api, lọc tên ngân hàng, xử lý
+								tin nhắn số dư.<br>
+								+ Nodejs cloud function để kết nối google chat với api<br>
+								+ Giao diện web để quản lý các kết nối, giới hạn các gói dịch vụ<br>
+								<p></p>
+								<p><b>Skills: </b> NodeJs, Cloud function, Google Api, SQL </p>
+							</div>
+						</div>
+					</div>
 
 				</div>
 			</div>
 		</div>
-		<div id="fh5co-consult">
-			<div class="container">
-				<div class="services-padding">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-							<h3><a href="mailto:dattv299@gmail.com">Contact me here!</a></h3>
-						</div>
+	</div>
+	<div id="fh5co-consult">
+		<div class="container">
+			<div class="services-padding">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h3><a href="mailto:dattv299@gmail.com">Contact me here!</a></h3>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-			<p><small>
-					All rights reserved. @Happy New Year 2024</small></p>
-		</div>
+	<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+		<p><small>
+				All rights reserved. @Happy New Year 2024</small></p>
+	</div>
+
+	<div class="gototop js-top active">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+	</div>
 
 
+	<!-- <script src="./Portfolio_files/js/modernizr-2.6.2.min.js"></script> -->
 
-		<div class="gototop js-top active">
-			<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-		</div>
+	<!-- jQuery -->
+	<!-- <script src="./Portfolio_files/js/jquery-3.6.0.min.js"></script> -->
+	<script src="./Portfolio_files/js/jquery.min.js"></script>
 
-
-		<!-- <script src="./Portfolio_files/js/modernizr-2.6.2.min.js"></script> -->
-
-		<!-- jQuery -->
-		<!-- <script src="./Portfolio_files/js/jquery-3.6.0.min.js"></script> -->
-		<script src="./Portfolio_files/js/jquery.min.js"></script>
-
-		<!-- jQuery Easing -->
-		<script src="./Portfolio_files/js/jquery.easing.1.3.js"></script>
-		<!-- Bootstrap -->
-		<script src="./Portfolio_files/js/bootstrap.min.js"></script>
-		<!-- Waypoints -->
-		<script src="./Portfolio_files/js/jquery.waypoints.min.js"></script>
-		<!-- Stellar Parallax -->
-		<script src="./Portfolio_files/js/jquery.stellar.min.js"></script>
-		<!-- Easy PieChart -->
-		<script src="./Portfolio_files/js/jquery.easypiechart.min.js"></script>
-		<!-- Google Map -->
-		<!-- <script src="./Portfolio_files/js/index.js"></script>
+	<!-- jQuery Easing -->
+	<script src="./Portfolio_files/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="./Portfolio_files/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="./Portfolio_files/js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="./Portfolio_files/js/jquery.stellar.min.js"></script>
+	<!-- Easy PieChart -->
+	<script src="./Portfolio_files/js/jquery.easypiechart.min.js"></script>
+	<!-- Google Map -->
+	<!-- <script src="./Portfolio_files/js/index.js"></script>
 		<script src="./Portfolio_files/google_map.js"></script>
 
 		<script type="text/javascript" charset="UTF-8" src="./Portfolio_files/js/common.js"></script>
 		<script type="text/javascript" charset="UTF-8" src="./Portfolio_files/js/util.js"></script> -->
 
-		<!-- Main -->
-		<script src="./Portfolio_files/js/main.js"></script>
+	<script>
+		$('.content-holder .thumbnail').each(function (i) {
+			var item = $('<div class="item"></div>');
+			var itemDiv = $(this).parents('div');
+			var title = $(this).parent('a').attr("title");
+
+			item.attr("title", title);
+			$(itemDiv.html()).appendTo(item);
+			item.appendTo('.carousel-inner');
+			if (i === 0) { // set first item active
+				item.addClass('active');
+			}
+		});
+
+		/* activate the carousel */
+		$('#modalCarousel').carousel({ interval: false });
+
+		/* change modal title when slide changes */
+		$('#modalCarousel').on('slid.bs.carousel', function () {
+			$('.modal-title').html($(this).find('.active').attr("title"));
+		});
+
+		/* when clicking a thumbnail */
+		$('.row .img-item').click(function () {
+
+			$('.modal-title').text($(this).find('h3').text());
+			// console.log($(this).find('h3').text());
+			let data = $(this).attr('data');
+			data = data ? data.split('||') : [];
+			console.log(data);
+			let ele = '';
+			let indicators = '';
+			// <ol class="carousel-indicators">
+			// 				<li data-target="#modalCarousel" data-slide-to="0" class="active"></li>
+			// 				<li data-target="#modalCarousel" data-slide-to="1"></li>
+			// 			</ol>
+			$('.carousel-inner').html('');
+			$('.carousel-indicators').html('');
+			for (let i in data) {
+				if (i == 0) {
+					// set first item active
+					ele += `<div class="item active">
+					<img class="img-carousel" src="${data[i]}" alt="Image">
+					</div>`;
+					indicators += `<li data-target="#modalCarousel" data-slide-to="${i}" class="active"></li>`;
+					// item.addClass('active');
+				} else {
+					ele += `<div class="item">
+					<img class="img-carousel" src="${data[i]}" alt="Image">
+					</div>`;
+					indicators += `<li data-target="#modalCarousel" data-slide-to="${i}"></li>`;
+				}
+
+				$('.carousel-inner').html(ele);
+				$('.carousel-indicators').html(indicators);
+
+			}
+
+			// console.log();
+			// var idx = $(this).parents('div').index();
+			// var id = parseInt(idx);
+			$('#myModal').modal('show'); // show the modal
+			// $('#modalCarousel').carousel(id); // slide carousel to selected
+		});
+	</script>
+
+	<!-- Main -->
+	<script src="./Portfolio_files/js/main.js"></script>
 	</div>
 </body>
 

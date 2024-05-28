@@ -957,6 +957,7 @@ figure {
   background-repeat: no-repeat;
   position: relative;
   height: 300px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -1521,3 +1522,63 @@ tbody img {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* customize */
+
+.thumbnail {
+  height: 100px;
+  margin: 6px;
+}
+
+.thumbnail {
+  margin-bottom: 6px;
+}
+
+.carousel-control.left {
+  background-image: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 25px;
+  height: 100%;
+  transform: translateY(-50%);
+}
+
+.carousel-control.right {
+  background-image: none;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 25px;
+  height: 100%;
+  transform: translateY(-50%);
+}
+
+.item .thumbnail {
+  margin: 0 auto;
+}
+
+.carousel-inner .item {
+  height: 70rem;
+  width: 100%;
+}
+.carousel-inner .img-carousel {
+  margin: auto;
+}
+
+.carousel-indicators li{
+  background: black;
+}
+
+.img-item{
+  cursor: pointer;
+
+}
+.display-flex .col-md-4 :hover{
+  /* background-color: #27ae60; */
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.06);
+}
+
+.prj-container{
+  margin: 10%;
+}
