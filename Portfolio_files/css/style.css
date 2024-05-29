@@ -431,7 +431,7 @@ figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  display: inline;
+  *display: inline;
   color: #364088;
   padding-left: 10px;
   padding-right: 10px;
@@ -1523,39 +1523,72 @@ tbody img {
 
 /*# sourceMappingURL=style.css.map */
 
-
 /* customize */
 
 .thumbnail {
-	height: 100px;
-	margin: 6px;
+  height: 100px;
+  margin: 6px;
 }
 
 .thumbnail {
-	margin-bottom: 6px;
+  margin-bottom: 6px;
 }
 
-
 .carousel-control.left {
-	background-image: none;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 25px;
-	height: 100%;
-	transform: translateY(-50%);
+  background-image: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 25px;
+  height: 100%;
+  transform: translateY(-50%);
 }
 
 .carousel-control.right {
-	background-image: none;
-	position: absolute;
-	top: 50%;
-	right: 0;
-	width: 25px;
-	height: 100%;
-	transform: translateY(-50%);
+  background-image: none;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 25px;
+  height: 100%;
+  transform: translateY(-50%);
 }
 
 .item .thumbnail {
-	margin: 0 auto;
+  margin: 0 auto;
+}
+
+.carousel-inner .item {
+  height: 70rem;
+  width: 100%;
+}
+.carousel-inner .item img{
+  max-height: 68rem;
+  width: auto;
+}
+.carousel-inner .img-carousel {
+  margin: auto;
+}
+
+.carousel-indicators li{
+  background: black;
+}
+
+.img-item{
+  cursor: pointer;
+
+}
+.display-flex .col-md-4 :hover{
+  /* background-color: #27ae60; */
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.06);
+}
+
+.prj-container{
+  margin: 10%;
+}
+
+.carousel-control i{
+  box-shadow: 0px 2px 10px 0px black;
+    border-radius: 8px;
+    color: black;
 }
