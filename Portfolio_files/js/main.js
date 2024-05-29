@@ -151,6 +151,70 @@
 		parallax();
 		skillsWayPoint();
 	});
-
-
 }());
+
+$('.content-holder .thumbnail').each(function (i) {
+	var item = $('<div class="item"></div>');
+	var itemDiv = $(this).parents('div');
+	var title = $(this).parent('a').attr("title");
+
+	item.attr("title", title);
+	$(itemDiv.html()).appendTo(item);
+	item.appendTo('.carousel-inner');
+	if (i === 0) { // set first item active
+		item.addClass('active');
+	}
+});
+
+/* activate the carousel */
+$('#modalCarousel').carousel({ interval: false });
+
+/* change modal title when slide changes */
+$('#modalCarousel').on('slid.bs.carousel', function () {
+	$('.modal-title').html($(this).find('.active').attr("title"));
+});
+
+/* when clicking a thumbnail */
+$('.row .img-item').click(function () {
+
+	$('.modal-title').text($(this).find('h3').text());
+	// console.log($(this).find('h3').text());
+	let data = $(this).attr('data');
+	data = data ? data.split('||') : [];
+	console.log(data);
+	let ele = '';
+	let indicators = '';
+	// <ol class="carousel-indicators">
+	// 				<li data-target="#modalCarousel" data-slide-to="0" class="active"></li>
+	// 				<li data-target="#modalCarousel" data-slide-to="1"></li>
+	// 			</ol>
+	$('.carousel-inner').html('');
+	$('.carousel-indicators').html('');
+	for (let i in data) {
+		if (i == 0) {
+			// set first item active
+			ele += `<div class="item active">
+			<img class="img-carousel" src="${data[i]}" alt="Image">
+			</div>`;
+			indicators += `<li data-target="#modalCarousel" data-slide-to="${i}" class="active"> 
+			<img class="indi-img" src="${data[i]}">
+			</li>`;
+			// item.addClass('active');
+		} else {
+			ele += `<div class="item">
+			<img class="img-carousel" src="${data[i]}" alt="Image">
+			</div>`;
+			indicators += `<li data-target="#modalCarousel" data-slide-to="${i}"><img class="indi-img" src="${data[i]}"></li>`;
+		}
+
+		$('.carousel-inner').html(ele);
+		$('.carousel-indicators').html(indicators);
+
+	}
+
+	// console.log();
+	// var idx = $(this).parents('div').index();
+	// var id = parseInt(idx);
+	$('#myModal').modal('show'); // show the modal
+	// $('#modalCarousel').carousel(id); // slide carousel to selected
+});
