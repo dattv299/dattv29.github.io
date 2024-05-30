@@ -129,7 +129,7 @@ figure {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(113, 108, 207, 0.9);
+  background: #364088;
 }
 
 #fh5co-header .display-t,
@@ -1568,7 +1568,13 @@ tbody img {
   width: auto;
 }
 .carousel-inner .img-carousel {
-  margin: auto;
+  /* margin: auto; */
+  position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
 }
 
 .carousel-indicators li{
