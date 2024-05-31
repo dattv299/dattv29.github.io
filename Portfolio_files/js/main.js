@@ -177,17 +177,13 @@ $('#modalCarousel').on('slid.bs.carousel', function () {
 /* when clicking a thumbnail */
 $('.row .img-item').click(function () {
 
-	$('.modal-title').text($(this).find('h3').text());
+	$('.modal-title').html($(this).find('h3').html());
 	// console.log($(this).find('h3').text());
 	let data = $(this).attr('data');
 	data = data ? data.split('||') : [];
 	console.log(data);
 	let ele = '';
 	let indicators = '';
-	// <ol class="carousel-indicators">
-	// 				<li data-target="#modalCarousel" data-slide-to="0" class="active"></li>
-	// 				<li data-target="#modalCarousel" data-slide-to="1"></li>
-	// 			</ol>
 	$('.carousel-inner').html('');
 	$('.carousel-indicators').html('');
 	for (let i in data) {
