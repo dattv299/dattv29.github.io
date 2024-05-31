@@ -1645,5 +1645,9 @@ tbody img {
 }
 
 .language-tab td{
-  padding: 0px 50px; 
+  padding: 10px 50px; 
+}
+
+td h2{
+  margin: auto;
 }
